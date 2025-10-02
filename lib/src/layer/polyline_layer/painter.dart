@@ -286,7 +286,7 @@ class _PolylinePainter<R extends Object> extends CustomPainter
   }) {
     final polyline = projectedPolyline.polyline as MulticolorPolyline<R>;
 
-    final colors = polyline.vertexColors;
+    final colors = polyline.resolvedVertexColors;
     final vertexCount = math.min(offsets.length, colors.length);
     if (vertexCount < 2) {
       return;
